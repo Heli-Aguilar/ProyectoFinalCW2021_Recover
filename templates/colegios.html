@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colegios</title>
+  <link href="../statics/styles/colegios.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../libs/bootstrap-5.0.1-dist/css/bootstrap.css">
+ 
+</head>
+<body>
+  <div id="navbar" class="navClass">
+        <div id="logo" class="navClass"><img src="../statics/img/logoNav.png" alt="Logo enp6" id="logoImg"></div>
+        <div id="nav_colegios" class="navClass"></div>
+        <div id="inicioSesion" class="navClass"><p id="sesionText">Iniciar Sesión/Registrarse</p></div>
+        <div id="perfil" class="navClass"><img id="imgPerfil" src="../statics/img/perfil.png" alt="" width="80px" height="80px" ></div>   
+        <label class="switch">
+          <input type="checkbox" id="check" checked>
+          <span class="slider round">
+            <img src="../statics/img/sun.png"alt="sol"  id="sun">
+            <img src="../statics/img/moona.png"alt="luna"  id="moon">
+          </span>
+        </label>     
+        <div id="logo_blanco"><img src="../statics/img/blancol.PNG" id="logoImgb" alt="logo claro"></div>     
+  </div>
+
+  <div id="divcolegio"><p id="colegio"></p></div>
+  <div id="colegio1">
+    <table class="table table-primary">
+      <tbody id="tbody">        
+      </tbody>
+    </table>
+  </div>
+  <form action="../dynamics/php/solicitarAsesoria.php" method="POST">
+  <div id="select">
+      <label for="selectMat"><p id="elige">Elige una asesoría:</p> </label><select name="numMat" id="selectMat"></select>
+      <button type="submit" id="ase">Solicitar Asesoría</button>
+  </div>
+  </form>
+  <form action="" method="POST" id="form">
+    <input type="hidden" value="Fisica">
+  </form>
+  
+<script src="../dynamics/js/colegios.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

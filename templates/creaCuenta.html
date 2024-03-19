@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Cuenta</title>
+  <link href="../statics/styles/creaCuenta.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="../libs/bootstrap-5.0.1-dist/css/bootstrap.css">
+</head>
+<body>
+  <div id="navbar" class="navClass">
+        <div id="logo" class="navClass"><img id="logoImg" src="../statics/img/logoNav.png" alt="Logo enp6" tabindex="1"></div>
+        <div id="nav_colegios" class="navClass"></div>
+        <div id="inicioSesion" class="navClass"><p id="sesionText" tabindex="1">Iniciar Sesión/Registrarse</p></div>
+        <div id="perfil" class="navClass" tabindex="1"><img id="imgPerfil" src="../statics/img/perfil.png" alt="" width="80px" height="80px" ></div>       
+        <label class="switch">
+          <input type="checkbox" id="check" checked tabindex="1">
+          <span class="slider round">
+            <img src="../statics/img/sun.png"alt="sol"  id="sun">
+            <img src="../statics/img/moona.png"alt="luna"  id="moon">
+          </span>
+        </label>  
+        <div id="logo_blanco"><img src="../statics/img/blancol.PNG" id="logoImgb" alt="logo claro"></div>     
+  </div>
+  <h1 id="Crear">Crea una cuenta</h1>
+  <form id="form">
+    <div id="der" > 
+      <input type="text" name="ApPat" placeholder="Apellido Paterno" size="12" class="inputs" id="apPat" required><br><br>
+      <input type="text" name="ApMat" placeholder="Apellido Materno" size="12" class="inputs" id="apMat" required><br><br>
+      <input type="text" name="Nombre" placeholder="Nombre(s)" size="25" class="inputs" id="nombre" required><br><br>   
+      <input type="email" name="correo" placeholder="Correo electrónico" id="correo" size="25" class="inputs" required>
+      <input type="text" name="telefono" placeholder="Número de teléfono" id="tel" size="25" class="inputs" maxlength="10" minlength="10" required>
+      <!--<label for="contraseña" id="cont">Contraseña</label>-->
+      <input type="password" name="contraseña" id="password" class="inputs" placeholder="Contraseña" required>
+      <p id="mostrarPass">Mostrar contraseña:</p> <input type="checkbox" id="checkboxPass">
+      <p id="caracPass">Mínimo 8 caracteres;mayúsculas, minúsculas,números <br> y un caracter especial</p> 
+      <input type="text" name="cuenta" placeholder="Número de cuenta" id="numcuenta" size="25" class="inputs" required>
+      <label for="nacimiento" id="titun">Nacimiento</label>
+      <input type="date" name="nacimiento " id="nacimiento" size="10" class="inputs" required>
+      <button type="button" id="boton" tabindex="1">Enviar</button>
+    </form>    
+
+<script src="../dynamics/js/creaCuenta.js"></script>
+<script src="../dynamics/js/accountCreation.js"></script>
+</body>
+</html>

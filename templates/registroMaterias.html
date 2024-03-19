@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible " content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../statics/styles/registroMaterias.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="../libs/bootstrap-5.0.1-dist/css/bootstrap.css">
+    <title>Registro Materias</title>
+</head>
+<body>
+
+    <div id="navbar" class="navClass">
+        <div id="logo" class="navClass"><img id="logoImg" src="../statics/img/logoNav.png" alt="Logo enp6" ></div>
+        <div id="nav_colegios" class="navClass"></div>
+        <div id="inicioSesion" class="navClass"><p id="sesionText">Iniciar Sesión/Registrarse</p></div>
+        <div id="perfil" class="navClass"><img id="imgPerfil" src="../statics/img/perfil.png" alt="" width="80px" height="80px" ></div>        
+    </div>
+
+    <form action="../dynamics/php/registroMaterias.php" method="POST">
+    <div id="paleta2">
+        <label for="anio" id="curso">Año Inscrito</label>
+        <select name="anio" id="anio" class="inputs" required>
+            <option>Cuarto</option>
+            <option>Quinto</option>
+            <option>Sexto</option>  
+        </select> <br><br><br><br><br>
+        <button type="submit" id="boton">Enviar</button>
+        <label for="materas" id="materias">Materias que dominas:</label>
+        <div id="cuarto">        
+            <table class="table table-info">
+            <tbody>
+                <tr>
+                <td><label for="mat4"><p>MATEMÁTICAS IV</p><input type="checkbox" value="1" id="mat4" name="mat4"></label></td>
+                <td><label for="fisica3"><p>FÍSICA III</p><input type="checkbox" value="2" id="fisica3" name="fisica3"></label></td>
+                <td><label for="lengua"><p>LENGUA ESPAÑOLA</p><input type="checkbox" value="3" id="lengua" name="lengua"></label></td>
+                <td><label for="historiaUni"><p>HISTORIA UNIVERSAL</p><input type="checkbox" value="4" id="historiaUni" name="historiaUni"></label></td>
+                <td><label for="logica"><p>LÓGICA</p><input type="checkbox" value="5" id="logica" name="logica"></label></td>
+                </tr>
+                <tr>
+                <td><label for="geo"><p>GEOGRAFÍA</p><input type="checkbox" value="6" id="geo" name="geo"></label></td>
+                <td><label for="dibujo2"><p>DIBUJO II</p><input type="checkbox" value="7" id="dibujo2" name="dibujo2"></label></td>
+                <td><label for="ingles4"><p>L.E.I. IV</p><input type="checkbox" value="8" id="ingles4" name="ingles4"></label></td>
+                <td><label for="frances4"><p>L.E.F. IV</p><input type="checkbox" value="9" id="frances4" name="frances4"></label></td>
+                <td><label for="infor"><p>INFORMÁTICA</p><input type="checkbox" value="13" id="infor" name="infor"></label></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        
+        <div id="quinto">
+          <table class="table table-danger">
+            <tbody>
+              <tr>
+                <td><label for="mate5"><p>MATEMÁTICAS V</p><input type="checkbox" value="14" id="mate5" name="mate5"></label></td>
+                <td><label for="quim3"><p>QUÍMICA III</p><input type="checkbox" value="15" id="quim3" name="quim3"></label></td>
+                <td><label for="bio4"><p>BIOLOGÍA IV</p><input type="checkbox" value="16" id="bio4" name="bio4"></label></td>
+                <td><label for="salud"><p>ED. DE LA SALUD</p><input type="checkbox" value="17" id="salud" name="salud"></label></td>
+                <td><label for="histMex"><p>HISTORIA DE MÉXICO</p><input type="checkbox" value="18" id="histMex" name="histMex"></label></td>
+                <td><label for="greco"><p>GRECOLATINAS</p><input type="checkbox" value="19" id="greco" name="greco"></label></td>
+                <td><label for="franc1"><p>L.E.F. I</p><input type="checkbox" value="25" id="franc1" name="franc1"></label></td>
+              </tr>
+              <tr>
+                <td><label for="ingles5"><p>L.E.I. V</p><input type="checkbox" value="20" id="ingles5" name="ingles5"></label></td>
+                <td><label for="franc5"><p>L.E.F. V</p><input type="checkbox" value="21" id="franc5" name="franc5"></label></td>
+                <td><label for="ital1"><p>L.E.IT. I</p><input type="checkbox" value="22" id="ital1" name="ital1"></label></td>
+                <td><label for="aleman"><p>L.E.A. I</p><input type="checkbox" value="23" id="aleman" name="aleman"></label></td>
+                <td><label for="etica"><p>ÉTICA</p><input type="checkbox" value="26" id="etica" name="etica"></label></td>
+                <td><label for="liteUniv"><p>LITERATURA UNIVERSAL</p><input type="checkbox" value="30" id="liteUniv" name="liteUniv"></label></td>
+                <td><label for="orientacion"><p>ORIENTACION EDUCATIVA</p><input type="checkbox" value="29" id="orientacion" name="orientacion"></label></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="sexto">
+          <table class="table table-warning">
+            <tbody>
+              <tr>
+                <td><label for="mate6"><p>MATEMÁTICAS VI</p><input type="checkbox" value="31" id="mate6" name="mate6"></label></td>
+                <td><label for="derecho"><p>DERECHO</p><input type="checkbox" value="32" id="derecho" name="derecho"></label></td>
+                <td><label for="liteMex"><p>LITERATURA MEXICANA</p><input type="checkbox" value="33" id="liteMex" name="liteMex"></label></td>
+                <td><label for="ingles6"><p>INGLÉS VI</p><input type="checkbox" value="34" id="ingles6" name="ingles6"></label></td>
+                <td><label for="franc6"><p>FRANCÉS VI</p><input type="checkbox" value="35" id="franc6" name="franc6"></label></td>
+                <td><label for="aleman2"><p>ALEMÁN II</p><input type="checkbox" value="36" id="aleman2" name="aleman2"></label></td>
+              </tr>
+              <tr>
+                <td><label for="italiano2"><p>ITALIANO II</p><input type="checkbox" value="37" id="italiano2" name="italiano2"></label></td>
+                <td><label for="ingles2"><p>INGLÉS II</p><input type="checkbox" value="38" id="ingles2" name="ingles2"></label></td>
+                <td><label for="franc2"><p>FRANCÉS II</p><input type="checkbox" value="39" id="franc2" name="franc2"></label></td>
+                <td><label for="psicologia"><p>PSICOLOGÍA</p><input type="checkbox" value="40" id="psicologia" name="psicologia"></label></td>
+                <td colspan="2"><label for="dibConstr"><p>DIBUJO CONSTRUCTIVO II</p><input type="checkbox" value="41" id="dibConstr" name="dibConstr"></label></td>
+              </tr>
+              <tr>
+                <td><label for="fisica4A1"><p>FISICA IV ÁREA 1</p><input type="checkbox" value="42" id="fisica4A1" name="fisica4A1"></label></td>
+                <td><label for="quimica4A1"><p>QUIMICA IV ÁREA 1</p><input type="checkbox" value="43" id="quimica4A1" name="quimica4A1"></label></td>
+                <td><label for="biologia5"><p>BIOLOGÍA V</p><input type="checkbox" value="44" id="biologia5" name="biologia5"></label></td>
+                <td><label for="GeoEconoc"><p>GEOGRAFÍA EONÓMICA</p><input type="checkbox" value="45" id="geoEconoc" name="geoEconoc"></label></td>
+                <td colspan="2"><label for="intAlEst"><p>INT. AL EST. C. S. Y ECO.</p><input type="checkbox" value="46" id="intAlEst" name="intAlEst"></label></td>
+              </tr>
+              <tr>
+                <td><label for="probsSoc"><p>PROBS. SOC Y POL. Y ECO.</p><input type="checkbox" value="47" id="probsSoc" name="probsSoc"></label></td>
+                <td><label for="histCult"><p>HISTORIA DE LA CULTURA</p><input type="checkbox" value="48" id="histCult" name="histCult"></label></td>
+                <td><label for="histDocFil"><p>HISTORIA DE LAS DOC. FIL</p><input type="checkbox" value="49" id="histDocFil" name="histDocFil"></label></td>
+                <td><label for="mat6A3"><p>MATEMÁTICAS VI ÁREA III</p><input type="checkbox" value="50" id="mat6A3" name="mat6A3"></label></td>
+                <td colspan="2"><label for="mat6A4"><p>MATEMÁTICAS VI ÁREA IV</p><input type="checkbox" value="51" id="mat6A4" name="mat6A4"></label></td>    
+              </tr>
+              <tr>
+                <td><label for="fisica4A2"><p>FISICA IV ÁREA II</p><input type="checkbox" value="52" id="fisica4A2" name="fisica4A2"></label></td>
+                <td><label for="quimica4A2"><p>QUÍMICA IV ÁREA II</p><input type="checkbox" value="53" id="quimica4A2" name="quimica4A2"></label></td>
+                <td><label for="higiene"><p>HIGIENE MENTAL</p><input type="checkbox" value="54" id="higiene" name="higiene"></label></td>
+                <td><label for="revMex"><p>REVOLUCION MEXICANA</p><input type="checkbox" value="55" id="revMex" name="revMex"></label></td>
+                <td colspan="2"><label for="contGestAdm"><p>CONT. Y GEST. ADMINISTRAT</p><input type="checkbox" value="56" id="contGestAdm" name="contGestAdm"></label></td>
+              </tr>
+              <tr>
+                <td><label for="pensFilo"><p>PENS. FILOSOFICO EN MÉXICO</p></pZ></p><input type="checkbox" value="57" id="pensFilo" name="pensFilo"></label></td>
+                <td><label for="geoYMiner"><p>GEOLOGÍA Y MINEROLOGÍA</p><input type="checkbox" value="58" id="geoYMiner" name="geoYMiner"></label></td>
+                <td><label for="geoPolit"><p>GEOGRAFÍA POLÍTICA</p><input type="checkbox" value="59" id="geoPolit" name="geoPolit"></label></td>        
+                <td><label for="modelado"><p>MODELADO II</p><input type="checkbox" value="60" id="modelado" name="modelado"></label></td>
+                <td colspan="2"><label for="fisicoQuimica"><p>FISICO QUÍMICA</p><input type="checkbox" value="61" id="fisicoQuimica" name="fisicoQuimica"></label></td>
+              </tr>
+              <tr>
+                <td><label for="temasSelMat"><p>TEMAS SELECTOS MAT.</p><input type="checkbox" value="62" id="temasSelMat" name="temasSelMat"></label></td>
+                <td><label for="temasSelBio"><p>TEMAS SELECTOS BIO.</p><input type="checkbox" value="63" id="temasSelBio" name="temasSelBio"></label></td>
+                <td><label for="estadYProb"><p>ESTADISTICA Y PROBABILIDAD</p><input type="checkbox" value="64" id="estadYProb" name="estadYProb"></label></td>
+                <td><label for="latin"><p>LATÍN</p><input type="checkbox" value="65" id="latin" name="latin"></label></td>
+                <td colspan="2"><label for="griego"><p>GRIEGO</p><input type="checkbox" value="66" id="griego" name="griego"></label></td>
+              </tr>
+              <tr>
+                <td><label for="comunVisual"><p>COMUNICACION VISUAL</p><input type="checkbox" value="67" id="comunVisual" name="comunVisual"></label></td>
+                <td><label for="temasSelMorfol"><p>TEMAS SEL. MORFOL. Y FIS.</p><input type="checkbox" value="68" id="temasSelMorfol" name="temasSelMorfol"></label></td>
+                <td><label for="histArte"><p>HISTORIA DEL ARTE</p><input type="checkbox" value="70" id="histArte" name="histArte"></label></td>
+                <td><label for="informatAplic"><p>INFORMAT. APLI. C. E IND.</p><input type="checkbox" value="71" id="informatAplic" name="informatAplic"></label></td>
+                <td colspan="2"><label for="sociologia"><p>SOCIOLOGÍA</p><input type="checkbox" value="72" id="sociologia" name="sociologia"></label></td>
+              </tr>
+              <tr>
+                <td><label for="cosmografia"><p>COSMOGRAFIA</p><input type="checkbox" value="73" id="cosmografia" name="cosmografia"></label></td>
+                <td><label for="astronomia"><p>ASTRONOMÍA</p><input type="checkbox" value="74" id="astronomia" name="astronomia"></label></td>
+                <td><label for="estetica"><p>ESTETICA</p><input type="checkbox" value="Estetica" id="estetica" name="estetica"></label></td>
+              </tr>
+            </tbody>
+          </table>        
+          </div>    
+        </div>
+    </form>
+
+
+
+
+
+    <script src="../dynamics/js/registroMaterias.js"></script>
+</body>
+</html>

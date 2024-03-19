@@ -1,0 +1,67 @@
+span{
+    background-color: chartreuse;
+    color: black;
+    border: 1px solid chartreuse;
+    border-radius: 10px;
+    position: relative;
+    top: 160px;
+    left: 45%;
+}
+span:hover{
+    cursor: pointer;
+}
+#tabla{
+
+    position: absolute;
+    height: 900px;
+    width: 500px;
+    left: 30%;
+    background-color: rgb(207, 201, 201);
+}
+#info{
+    position: relative;
+    top: 100px;
+}
+#foto{
+    position: relative;
+    left: 30%;
+}
+#nombre{
+    font-size: 2vw;;
+    position: relative;
+    left: 40%;
+}
+#horarioText{
+    position: relative;
+    left: 40%;
+    font-size: 2vw;
+}
+#horarios{
+    position: relative;
+    left: 33%;
+}
+#modalidadText{
+    position: relative;
+    left: 2%;
+    font-size: 2vw;
+}
+#modalidad{
+    position: relative;
+    left: 38%;
+    top: 30px;
+}
+#asesoria{
+    position: relative;
+    left: 30%;
+    top: 70px;
+}
+#inputDia{
+    position: relative;
+    top: 20px;
+    left: 8%;    
+}
+#asesoriaText{
+    position: relative;
+    left: 3%;
+    font-size: 2vw;
+}

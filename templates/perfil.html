@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="../statics/styles/perfil.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="../libs/bootstrap-5.0.1-dist/css/bootstrap.css">
+</head>
+<body>
+  <div id="navbar" class="navClass">
+        <div id="logo" class="navClass"><img src="../statics/img/logoNav.png" alt="Logo enp6" id="logoImg"></div>
+        <div id="nav_colegios" class="navClass"></div>
+        <div id="inicioSesion" class="navClass"><p id="sesionText">Iniciar Sesión/Registrarse</p></div>
+        <div id="perfil" class="navClass"><img id="imgPerfil" src="../statics/img/perfil.png" alt="" width="80px" height="80px" ></div> 
+        <label class="switch">
+          <input type="checkbox" id="check" checked>
+          <span class="slider round">
+            <img src="../statics/img/sun.png"alt="sol"  id="sun">
+            <img src="../statics/img/moona.png"alt="luna"  id="moon">
+          </span>
+        </label>     
+        <div id="logo_blanco"><img src="../statics/img/blancol.PNG" id="logoImgb" alt="logo claro"></div>            
+  </div>
+  <div id="IMGPerfil">
+  
+  </div>
+  <img src="../statics/img/perfil/Andreco.jpeg" alt="Foto de Perfil" id="perfilGrande">
+  <!--<div id="perfilGrande"></div>-->
+  <div id="cambioFotoPerfil"><p id="textFotoPerfil">Cambiar foto de Perfil.</p></div>
+  <div id="divPerfil">
+    <form action="../dynamics/php/perfil.php" method="POST" enctype="multipart/form-data">
+      <label for="inputFoto"><input type="file" id="inputFoto" name="Archivo"></label>
+      <button type="submit" id="boton">Subir</button>
+    </form>
+  </div>
+  <div id="datosPerfil">
+    <table class="table table-info">
+      <tbody>
+        <tr>
+          <th><p class="tabla">Nombre:</p></th>
+          <td id="tdNombre"></td>
+        </tr>
+        <tr>
+          <th><p class="tabla">Número de cuenta:</p></th>
+          <td id="varNumCuenta"></td>
+        </tr>
+        <tr>
+          <th><p class="tabla">Correo:</p></th>
+          <td id="correo"></td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <p id="name">Nombre:</p>
+    <div id="nombre"><p id="varNombre">González Falcón Luis Adrián</p></div>
+    <p id="cuenta">Numero de cuenta:</p>
+    <div id="numCuenta"><p id="varNumCuenta">320095672</p></div>
+    <p id="email">Correo:</p>
+    <div id="divCorreo"><p id="correo">luilli359@gmail.com</p></div> -->
+  </div>
+
+
+
+  <div id="tablaMaterias"> 
+  <table class="table table-info">
+    <thead>
+      <tr>
+        <th>Materias</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+  </table>
+  </div>
+  <form action="" method="POST" id="form">
+    <input type="hidden" value="Nombre">
+  </form>
+
+
+<script src="../dynamics/js/perfil.js"></script>
+</body>
+</html>

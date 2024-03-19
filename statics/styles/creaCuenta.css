@@ -1,0 +1,464 @@
+/*===FUENTES ===
+-------------------------------------------------------------*/
+@font-face {
+  font-family:"philosopher_normal";
+  src: url("../fonts/philosopher/Philosopher-Regular.ttf"); 
+}
+@font-face {
+font-family:"philosopher_bold";
+src: url("../fonts/philosopher/Philosopher-Bold.ttf"); 
+}
+/*===GENERAL ===
+-------------------------------------------------------------*/
+body{
+  background-color: #CCD1D1;
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.2s linear;
+}
+body.dark{
+  background-color: #292c35;
+} 
+body.dark #Crear{
+  color: white;
+}
+body.dark #navbar{
+  background: linear-gradient(180deg, #717D7E 0%, rgba(255, 255, 255, 0) 100%), #717D7E;
+}
+body.dark #logoImg{
+  display: none;
+}
+
+body.dark #logoImgb{
+  display: block;
+}
+/* p{
+  font-family: "poppins",Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  justify-content: between-around;
+  height: 75px;
+  color: rgb(0, 0, 0);
+} */
+
+/*==NAVBAR===
+---------------------------------------------------------------------*/
+/*  =NAV_ICONOS
+--------------------------------------------------------------------*/
+.navClass{
+  position: absolute;
+  height: 80%;
+  width: 15%;
+  top: 10%; 
+  }
+  /* background-color: white;  */
+
+#logoImg{
+  position: absolute;
+  height: 100px;
+  width: 120px;
+  top: -10px;
+}
+#logoImgb{
+  position: absolute;
+  height: 140px;
+  width: 160px;
+  top: -20px;
+  left: -10px;
+  display: none;
+  /* background-image: url("./img/logoNav.png"); */
+}
+#logo_blanco{
+  height: 80%;
+  width: 100px;
+  left: -10%;
+  background-image: url("./img/logoNav.png");
+}
+#logo{
+  height: 80%;
+  width: 100px;
+  left: 1%;
+  background-image: url("./img/logoNav.png");
+}
+#logoImg:hover{
+  cursor: pointer;
+}
+#logoImgb:hover{
+  cursor: pointer;
+}
+#nav_colegios{
+  left: 15%;
+}
+#inicioSesion{
+  height: 50px;
+  left: 72%;
+  top: 30%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  font-size: 2vw;
+  display: block;
+}
+#inicioSesion:hover{
+  outline: none;
+  color: rgb(190, 156, 204);
+  transform: scale(1.2);
+  cursor:pointer;
+}
+
+#sesionText{
+  position: absolute;
+  color: white;
+  font-size: 1vw;
+  height: 30px;
+  left: 25px;
+  top: 30%;
+}
+#perfil{
+  height: 80%;
+  width: 7%;
+  left: 90%;
+}
+#imgPerfil:hover{
+  cursor: pointer;
+}
+#inicioSesion:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+/* /NAV ICONOS--------------------------------------------------------*/
+
+#navbar{
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100px;
+  background: linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), #229954;
+  z-index: 2;
+}
+#Crear{
+  position: absolute;
+  color: black;
+  top: 15%;
+  left: 40%;
+  font-family: 'philosopher_normal';
+}
+/*TOOGLE*/
+#sun{
+  left: 50%;
+  width:28px;
+  height:28px;
+}
+#moon{
+  position: absolute;
+  z-index:0 ;
+  left: 58%;
+  top: 2%;
+  width:25px;
+  height:25px;
+  text-align: right;
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+left: 10%;
+top: 35%;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2;
+background-color: black;
+background-image: "../statics/img/sun.png";
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+z-index: 2;
+background-color: rgb(255, 255, 255);
+background-image: "../statics/img/sun.png";
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #F2D649;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #F2D649;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+/*===FORMULAARIO===
+---------------------------------------------------------------------------------*/
+.inputs{
+  font-size: 25px;
+}
+#apPat{
+  position: absolute;
+  left: 2%;
+}
+#apMat{
+  position: absolute;
+  top: 3.4%;
+  left: 26%;
+}
+#correo{
+  position: absolute;
+  top: 3%;
+  left: 55%;
+}
+#tel{
+  position: absolute;
+  top: 20%;
+  left: 55%; 
+}
+#numcuenta{
+  position: absolute;
+  top: 35%;
+  left: 2%;
+  /* height: 30px; */
+}
+#nombre{
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  /* font-size: 20px; */
+}
+#titun{
+  position: absolute;
+  opacity: 0.6;
+  top: 50%;
+  left: 2%; 
+  font-size: 25px;
+}
+#cont{
+  position: absolute;
+  opacity: 0.6;
+  top: 24%;
+  left: 55%; 
+  font-size: 25px;
+}
+#password{
+  position: absolute;
+  top: 35%;
+  left: 55%; 
+}
+#mostrarPass{
+  position: absolute;
+  top: 57%;
+  font-size: 1vw;
+  color: gray;
+  right: 32%;
+}
+#caracPass{
+  position: absolute;
+  top: 47%;
+  font-size: 1vw;
+  color: gray;
+  right: 10%;
+  text-align: left;
+}
+#checkboxPass{
+  position: absolute;
+  right: 30%;
+  top:58% ;
+}
+#nacimiento{
+  position: absolute;
+  top: 50%;
+  left: 25%; 
+  font-size: 16px;
+}
+#anio{
+  position: absolute;
+  top: 45%;
+  right: 20%;
+}
+#curso{
+  position: absolute;
+  opacity: 0.6;
+  top: 45%;
+  left: 55%; 
+  font-size: 25px;  
+}
+#materias{
+  position: absolute;
+  opacity: 0.6;
+  top: 55%;
+  left: 2%; 
+  font-size: 25px;
+}
+/*===CONTENEDOR===
+-----------------------------------------------------------------------------------------*/
+#der {
+    position: absolute;
+    text-align:center;
+    font-family: "poppins", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 15px;
+    background-color:white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 70%;
+    height: 60%;
+    top: 25%;
+    left: 15%;
+}
+#cuarto{
+  position: absolute;
+  opacity: 0.9;
+  font-size: 15px; 
+  left: 20%;
+  top: 65%;
+}
+#quinto{
+  position: absolute;
+  opacity: 0.9;
+  font-size: 15px; 
+  /* left: 20%; */
+  display: none;
+}
+#sexto{
+  position: absolute;
+  opacity: 0.9;
+  font-size: 15px; 
+  top: 25%;
+  display: none; 
+}
+#paleta2{
+    text-align:center;
+    font-family: "poppins", Arial, Helvetica, sans-serif;
+    padding: 15px;
+    background-color:white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 70%;
+    height: 1200px;
+    top: 96%;
+    left: 15%;
+    position: absolute;
+    opacity: 0.9;
+    font-size: 15px;
+    display: none; 
+}
+
+#boton{
+  background-color: #229954;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  position: absolute;
+  top: 80%;
+  right: 10%;
+
+}
+#boton:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background-color: #145A32;
+  transform: scale(1.1);
+  cursor:pointer;
+}
+@media screen and (max-width: 1250px){
+  #der{
+    width: 40%;
+    height: 70%;
+    top: 25%;
+    left: 30%;
+  }
+  /*INPUTS*/
+  #apPat{
+    left:2% ;
+  }
+  #apMat{
+    /* top: 3%; */
+    left: 50%;
+  }
+  #nombre{
+    top: 15%;
+    left: 2%;
+  }
+  #correo{
+    top: 48%;
+    left: 2%;
+  }
+  #tel{
+    top: 60%;
+    left: 2%;
+  }
+  #numcuenta{
+    top: 26%;
+    left: 2%; 
+  }
+  #password{
+    top: 37%;
+    left: 2%; 
+  }
+  #mostrarPass{
+    top: 45%;
+    right: 32%;   
+  }
+  #checkboxPass{
+    right: 28%;
+    top:45% ;
+  }
+  #titun{
+    top: 71%;
+    left: 2%; 
+  }
+  #nacimiento{
+    top: 72%;
+    left: 30%
+  }
+  #boton{
+  top: 84%;
+  right: 20%;
+  }
+  .inputs{
+    size: 10;
+  }
+}
+@media screen and (max-width: 768px){
+  .switch {
+    left: 15%;
+  }
+  #der{
+    width: 65%;
+  }
+}

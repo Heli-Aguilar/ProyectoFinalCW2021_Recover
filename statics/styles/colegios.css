@@ -1,0 +1,279 @@
+/*===FUENTES ===
+-------------------------------------------------------------*/
+@font-face {
+  font-family:"philosopher_normal";
+  src: url("../fonts/philosopher/Philosopher-Regular.ttf"); 
+}
+@font-face {
+font-family:"philosopher_bold";
+src: url("../fonts/philosopher/Philosopher-Bold.ttf"); 
+}
+@font-face {
+  font-family: "poppins_regular";
+  src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+/*===GENERAL ===
+-------------------------------------------------------------*/
+body{
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 100%;
+}
+body.dark{
+  background-color: #292c35;
+}
+body.dark #colegio{
+  color: white;
+}
+body.dark #elige{
+  color: white;
+}
+body.dark #navbar{
+  background: linear-gradient(180deg, #717D7E 0%, rgba(255, 255, 255, 0) 100%), #717D7E;
+}
+body.dark #logoImg{
+  display: none;
+}
+
+body.dark #logoImgb{
+  display: block;
+}
+p{
+  font-family: "poppins",Arial, Helvetica, sans-serif;
+  font-size: 1vw;
+  justify-content: between-around;
+  height: 20px;
+  color: rgb(0, 0, 0);
+}
+
+/*==NAVBAR===
+---------------------------------------------------------------------*/
+/*  =NAV_ICONOS
+--------------------------------------------------------------------*/
+.navClass{
+  position: absolute;
+  height: 80%;
+  width: 15%;
+  top: 10%; 
+}
+#logoImg{
+  position: absolute;
+  height: 100px;
+  width: 120px;
+  top: -10px;
+}
+#logo{
+  height: 80%;
+  width: 100px;
+  left: 1%;
+  background-image: url("./img/logoNav.png");
+}
+#nav_colegios{
+  left: 15%;
+}
+#inicioSesion{
+  height: 50px;
+  left: 72%;
+  top: 30%;
+  background-color: rgb(187, 194, 189);
+  border-radius: 30px;
+  font-size: 2vw;
+  display: block;
+}
+#inicioSesion:hover{
+  outline: none;
+  color: rgb(190, 156, 204);
+  transform: scale(1.2);
+  cursor:pointer;
+}
+
+#sesionText{
+  position: absolute;
+  color: black;
+  font-size: 1vw;
+  height: 30px;
+  left: 25px;
+}
+#perfil{
+  height: 80%;
+  width: 7%;
+  left: 90%;
+}
+#imgPerfil:hover{
+  cursor: pointer;
+}
+#inicioSesion:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+/* /NAV ICONOS--------------------------------------------------------*/
+
+#navbar{
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100px;
+  background: linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), #229954;
+  z-index: 2;
+}
+#logo:hover{
+  cursor: pointer;
+}
+#logoImg:hover{
+  cursor: pointer;
+}
+#logoImgb:hover{
+  cursor: pointer;
+}
+#logoImgb{
+  position: absolute;
+  height: 140px;
+  width: 160px;
+  top: -20px;
+  left: -10px;
+  display: none;
+  /* background-image: url("./img/logoNav.png"); */
+}
+#logo_blanco{
+  height: 80%;
+  width: 100px;
+  left: -10%;
+  background-image: url("./img/logoNav.png");
+}
+/*TOOGLE*/
+#sun{
+  left: 50%;
+  width:28px;
+  height:28px;
+}
+#moon{
+  position: absolute;
+  z-index:0 ;
+  left: 58%;
+  top: 2%;
+  width:25px;
+  height:25px;
+  text-align: right;
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+left: 10%;
+top: 35%;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+z-index: 2;
+background-color: black;
+background-image: "../statics/img/sun.png";
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+z-index: 2;
+background-color: rgb(255, 255, 255);
+background-image: "../statics/img/sun.png";
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #F2D649;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #F2D649;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+/*----------------------------------------------------------*/
+/*Tabla materias*/
+#colegio{
+  position: absolute;
+  
+  text-align: center;
+  color: black;
+}
+#divcolegio{
+  position: absolute;
+  align-items: center;
+  top: 100px;
+  left: 30%;
+  height: 60px;
+  width: 300px;
+}
+#colegio1{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+#select{
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+p{
+  font-family: "poppins_regular";
+}
+
+#colegio{
+  font-family:"philosopher_normal" ;
+  font-size: 50px;
+}
+#ase{
+  background-color: #229954;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  top: 90%;
+
+}
+#ase:hover{
+  outline: none;
+  color: rgb(255, 255, 255);
+  background-color: #145A32;
+  transform: scale(1.1);
+  cursor:pointer;
+}
+#selectMat{
+  font-size: 20px;
+}
+#elige{
+  font-size: 20px;
+}
+

@@ -1,0 +1,19 @@
+.acept{
+    border: 1px solid #00cc00;
+    position: relative;
+    left: 50%;
+    bottom: 20px;
+}
+
+.reject{
+    border: 1px solid #cc0000;
+    position: relative;
+    left: 55%;
+    bottom: 20px;
+}
+
+.submit{
+    border: 1px solid #0000cc;
+    position: relative;
+    left: 5%;
+}

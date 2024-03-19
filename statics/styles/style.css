@@ -1,0 +1,615 @@
+/*===FUENTES ===
+-------------------------------------------------------------*/
+@font-face {
+    font-family:"philosopher_normal";
+    src: url("../fonts/philosopher/Philosopher-Regular.ttf"); 
+}
+@font-face {
+  font-family:"philosopher_bold";
+  src: url("../fonts/philosopher/Philosopher-Bold.ttf"); 
+}
+
+/*===GENERAL ===
+-------------------------------------------------------------*/
+body{
+  background-color: #B2BABB;
+  width: 100%;
+  height: 3000px;
+  transition: background-color 0.2s linear;
+}
+body.dark{
+  background-color: #292c35;
+}
+body.dark #Crear{
+  color: white;
+}
+body.dark #navbar{
+  background: linear-gradient(180deg, #717D7E 0%, rgba(255, 255, 255, 0) 100%), #717D7E;
+}
+body.dark #logoImg{
+  display: none;
+}
+body.dark #fotoPrepan{
+  display: block;
+  transition: display 0.2s linear;
+}
+body.dark #logoImgb{
+  display: block;
+}
+p{
+  font-family: "poppins",Arial, Helvetica, sans-serif;
+  font-size: 3vw;
+  justify-content: between-around;
+  height: 75px;
+  color: white;
+}
+
+/*==NAVBAR===
+---------------------------------------------------------------------*/
+/*  =NAV_ICONOS
+--------------------------------------------------------------------*/
+.navClass{
+  position: absolute;
+  height: 80%;
+  width: 15%;
+  top: 10%;
+}
+#logoImg{
+  position: absolute;
+  height: 100px;
+  width: 120px;
+  top: -10px;
+  background-image: url("./img/logoNav.png");
+}
+#logoImgb{
+  position: absolute;
+  height: 140px;
+  width: 160px;
+  top: -20px;
+  left: -10px;
+  display: none;
+  /* background-image: url("./img/logoNav.png"); */
+}
+#logo{
+  height: 80%;
+  width: 100px;
+  left: 1%;
+  background-image: url("./img/logoNav.png");
+}
+#logo_blanco{
+  height: 80%;
+  width: 100px;
+  left: -10%;
+  background-image: url("./img/logoNav.png");
+}
+#nav_colegios{
+  left: 15%;
+}
+#inicioSesion{
+  height: 50px;
+  left: 72%;
+  top: 30%;
+  background-color: rgb(0, 0, 0);
+  border-radius: 30px;
+  font-size: 2vw;
+  display: block;
+}
+#inicioSesion:hover{
+  outline: none;
+  color: rgb(190, 156, 204);
+  transform: scale(1.2);
+  cursor:pointer;
+}
+#logoImgb:hover{
+  cursor: pointer;
+}
+#logoImg:hover{
+  cursor: pointer;
+}
+#sesionText{
+  position: absolute;
+  color:  rgb(f,f,f);
+  font-size: 1vw;
+  height: 30px;
+  left: 25px;
+}
+#perfil{
+  height: 80%;
+  width: 7%;
+  left: 90%;
+}
+#imgPerfil:hover{
+  cursor: pointer;
+}
+#inicioSesion:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+/* /NAV ICONOS--------------------------------------------------------*/
+navbar.dark{
+  background-color: black;
+}
+#navbar{
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100px;
+  background: linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #229954 0%, rgba(255, 255, 255, 0) 100%), #229954;
+  z-index: 2;
+}
+/*TOOGLE*/
+  #sun{
+    left: 50%;
+    width:28px;
+    height:28px;
+  }
+  #moon{
+    position: absolute;
+    z-index:0 ;
+    left: 58%;
+    top: 2%;
+    width:25px;
+    height:25px;
+    text-align: right;
+  }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  left: 10%;
+  top: 35%;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: black;
+  background-image: "./statics/img/sun.png";
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  background-image: "./statics/img/sun.png";
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #F2D649;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #F2D649;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*FOTO 
+-------------------------------------------------------------------------*/
+#foto{
+	position: absolute;  
+  width: 100%;
+  height: 68%;
+  top: 12%;
+  left: 0%;
+}
+#foto2{
+	position: absolute;  
+  width: 100%;
+  height: 68%;
+  top: 12%;
+  left: 0%;
+}
+#fotoPrepa{
+  position: absolute;
+  width: 100%;
+  height: 501px;
+}
+#fotoPrepan{
+  position: absolute;
+  width: 100%;
+  height: 501px;
+  display: none;
+}
+
+
+/*COLEGIOS
+-------------------------------------------------------------------------*/
+/* .botones{
+  display: none;
+} */
+.textColeDer{
+  position: absolute;
+  left: 30%;
+  font-family: 'philosopher_normal';
+}
+.textColeIzq{
+  position: absolute;
+  right: 30%;
+  font-family: 'philosopher_normal';
+}
+.coleCard{
+  position: absolute;
+  border-radius: 50px;
+}
+.coles{
+  width: 70%;
+  height: 170px;
+}
+.logoColeIzq{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  left: 50px;
+  top: 10px;
+}
+.logoColeDer{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  right: 50px;
+  top: 10px;
+}
+#colegio1{
+  top: 80%;
+  left: 30%;
+  position: absolute;
+  background-color: #E74C3C;
+}
+#colegio2{
+  top: 100%;
+  left: 0%;
+  position: absolute;
+  background-color:#E67E22;
+}
+#colegio3{
+  top: 120%;
+  left: 30%;
+  position: absolute;
+  background-color: #3498DB;
+ 
+}
+#colegio4{
+  top: 140%;
+  left: 0%;
+  position: absolute;
+  background-color:#2ECC71;
+  
+}
+#colegio5{
+  top: 160%;
+  left: 30%;
+  position: absolute;
+  background-color:#BDC3C7;
+  
+}
+#colegio6{
+  top: 180%;
+  left: 0%;
+  position: absolute;
+  background-color:#F39C12;
+}
+#colegio7{
+  top: 200%;
+  left: 30%;
+  position: absolute;
+  background-color:#95A5A6 ; 
+ 
+}
+#colegio8{
+  top: 220%;
+  left: 0%;
+  position: absolute;
+  background-color:#16A085;
+}
+#colegio9{
+  top: 240%;
+  left: 30%;
+  position: absolute;
+  background-color:#F1C40F;
+}
+#colegio10{
+  top: 260%;
+  left: 0%;
+  position: absolute;
+  background-color: #8E44AD;
+}
+#colegio11{
+  top: 280%;
+  left: 30%;
+  position: absolute; 
+  background-color: #1ABC9C;
+}
+#colegio12{
+  top: 300%;
+  left: 0%;
+  position: absolute;
+  background-color: #95A5A6;
+}
+#colegio13{
+  top: 320%;
+  left: 30%;
+  position: absolute;
+  background-color: #2980B9;
+}
+#colegio14{
+  top: 340%;
+  left: 0%;
+  position: absolute;
+  background-color: #C0392B;
+}
+#colegio15{
+  top: 360%;
+  left: 30%;
+  position: absolute;
+  background-color:#F39C12 ;
+}
+#colegio16{
+  top: 380%;
+  left: 0%;
+  position: absolute;
+  background-color: #9B59B6;
+}
+#colegio17{
+  top: 400%;
+  left: 30%;
+  position: absolute;
+  background-color: #1ABC9C;
+}
+#colegio18{
+  top: 420%;
+  left: 0%;
+  position: absolute;
+  background-color: #34495E;
+}
+#colegio19{
+  top: 440%;
+  left: 30%;
+  position: absolute;
+  background-color: #2ECC71;
+}
+#colegio20{
+  top: 460%;
+  left: 0%;
+  position: absolute;
+  background-color: #2980B9;
+}
+
+/*HOVER 
+---------------------------------------------------------------------*/
+.coleCard:hover{
+  outline: none;
+  transform: scale(1.2);
+  cursor:pointer;
+  z-index: 1;
+  
+}
+
+/*footer
+-----------------------------------------------------------------------*/
+#pie{
+  top: 480%;
+  left: 30%;
+  position: absolute;
+  background-color: chartreuse; 
+}
+/* #pie{
+  top: 480%;
+  left: 0%;
+  width: 100%;
+	height: 100px;
+  background: linear-gradient(180deg, #3BFF41 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #37ED3D 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #35E63B 0%, rgba(255, 255, 255, 0) 100%), #33BF38; 
+} */
+/*DISEÑO ADAPTABLE
+----------------------------------------------------------------------*/
+@media screen and (max-width: 1250px){
+  .botones{
+    display: block;
+    left: 50%;
+  }
+  .textColeDer{
+    position: absolute;
+    /* text-align: center; */
+    left: 45%;
+
+
+}
+  .textColeIzq{
+    position: absolute;  
+    /* text-align: center; */
+    left: 45%;
+
+  }
+
+  .logoColeIzq{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    left: 50px;
+    top: 10px;
+  }
+  .logoColeDer{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    right: 50px;
+    top: 10px;
+  }
+  
+  .coleCard{
+    position: absolute;
+    border-radius: 0px;
+    left: 0% ;
+  }
+
+  .coles{
+    width: 100%;
+    height: 171px;
+    left: 0% ;
+  } 
+
+  #colegio1{
+    top: 80%;
+    left: 0%;
+    position: absolute;
+    background-color: #E74C3C;
+  }
+  #colegio2{
+    top: 110%;
+    left: 0%;
+    position: absolute;
+    background-color:#E67E22;
+  }
+  #colegio3{
+    top: 140%;
+    left: 0%;
+    position: absolute;
+    background-color: #3498DB;
+  
+  }
+  #colegio4{
+    top: 170%;
+    left: 0%;
+    position: absolute;
+    background-color:#2ECC71;
+    
+  }
+  #colegio5{
+    top: 200%;
+    left: 0%;
+    position: absolute;
+    background-color:#BDC3C7;
+    
+  }
+  #colegio6{
+    top: 230%;
+    left: 0%;
+    position: absolute;
+    background-color:#F39C12;
+  }
+  #colegio7{
+    top: 260%;
+    left: 0%;
+    position: absolute;
+    background-color:#95A5A6 ; 
+  
+  }
+  #colegio8{
+    top: 290%;
+    left: 0%;
+    position: absolute;
+    background-color:#16A085;
+  }
+  #colegio9{
+    top: 320%;
+    left: 0%;
+    position: absolute;
+    background-color:#F1C40F;
+  }
+  #colegio10{
+    top: 350%;
+    left: 0%;
+    position: absolute;
+    background-color: #8E44AD;
+  }
+  #colegio11{
+    top: 380%;
+    left: 0%;
+    position: absolute; 
+    background-color: #1ABC9C;
+  }
+  #colegio12{
+    top: 410%;
+    left: 0%;
+    position: absolute;
+    background-color: #95A5A6;
+  }
+  #colegio13{
+    top: 440%;
+    left: 0%;
+    position: absolute;
+    background-color: #2980B9;
+  }
+  #colegio14{
+    top: 470%;
+    left: 0%;
+    position: absolute;
+    background-color: #C0392B;
+  }
+  #colegio15{
+    top: 500%;
+    left: 0%;
+    position: absolute;
+    background-color:#F39C12 ;
+  }
+  #colegio16{
+    top: 530%;
+    left: 0%;
+    position: absolute;
+    background-color: #9B59B6;
+  }
+  #colegio17{
+    top: 560%;
+    left: 0%;
+    position: absolute;
+    background-color: #1ABC9C;
+  }
+  #colegio18{
+    top: 590%;
+    position: absolute;
+    background-color: #34495E;
+  }
+  #colegio19{
+    top: 620%;
+    left: 0%;
+    position: absolute;
+    background-color: #2ECC71;
+  }
+  #colegio20{
+    top: 650%;
+    left: 0%;
+    position: absolute;
+    background-color: #2980B9;
+  }
+  
+}
+@media screen and (max-width: 768px){
+  .switch {
+    left: 15%;
+  }
+
+}
